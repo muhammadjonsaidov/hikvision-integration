@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "springdoc.propertysource.enabled",
+      "type": "java.lang.String",
+      "description": "Description for springdoc.propertysource.enabled."
+    },
+    {
+      "name": "springdoc.title",
+      "type": "java.lang.String",
+      "description": "Description for springdoc.title."
+    },
+    {
+      "name": "springdoc.description",
+      "type": "java.lang.String",
+      "description": "Description for springdoc.description."
+    }
+  ]
+}
