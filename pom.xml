@@ -29,16 +29,12 @@
     <properties>
         <java.version>21</java.version>
     </properties>
+
     <dependencies>
+        <!-- Asosiy Spring Boot Web kutubxonasi -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
 
         <!-- XML ma'lumotlarini osonlik bilan Java obyektiga o'girish uchun -->
@@ -51,14 +47,13 @@
         <dependency>
             <groupId>org.apache.httpcomponents.client5</groupId>
             <artifactId>httpclient5</artifactId>
-            <version>5.3.1</version>
         </dependency>
 
         <!-- Swagger (OpenAPI 3) uchun -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.5.0</version> <!-- Eng so'nggi versiyani ishlatgan ma'qul -->
+            <version>2.5.0</version>
         </dependency>
     </dependencies>
 
