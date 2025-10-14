@@ -40,6 +40,26 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- XML ma'lumotlarini osonlik bilan Java obyektiga o'girish uchun -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+
+        <!-- Digest Authentication'ni qo'llab-quvvatlaydigan HTTP klient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+            <version>5.3.1</version>
+        </dependency>
+
+        <!-- Swagger (OpenAPI 3) uchun -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.5.0</version> <!-- Eng so'nggi versiyani ishlatgan ma'qul -->
+        </dependency>
     </dependencies>
 
     <build>
