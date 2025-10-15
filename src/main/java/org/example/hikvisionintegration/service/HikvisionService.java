@@ -37,12 +37,13 @@ public class HikvisionService {
         String webhookUrl = String.format("http://%s:%d/api/face-event", serverIp, serverPort);
 
         String xmlPayload = String.format(
-            "<HttpHost version=\"2.0\" xmlns=\"http://www.isapi.org/ver20/XMLSchema\">" +
-            "<id>1</id>" +
-            "<url>%s</url>" +
-            "<protocolType>HTTP</protocolType>" +
-            "<addressingFormatType>ipaddress</addressingFormatType>" +
-            "</HttpHost>", webhookUrl);
+                "<HttpHost version=\"2.0\" xmlns=\"http://www.isapi.org/ver20/XMLSchema\">" +
+                        "<id>1</id>" +
+                        "<url>%s</url>" +
+                        "<protocolType>HTTP</protocolType>" +
+                        "<addressingFormatType>ipaddress</addressingFormatType>" +
+                        "<parameterFormatType>XML</parameterFormatType>" + // <-- QO'SHILGAN MUHIM QATOR
+                        "</HttpHost>", webhookUrl);
 
         System.out.println("Hikvision qurilmasini sozlanmoqda...");
         System.out.println("Webhook manzili sifatida o'rnatiladi: " + webhookUrl);
@@ -85,7 +86,7 @@ public class HikvisionService {
             // Digest Auth bilan so'rov yuborish logikasi (configureWebhook'dan ko'chirilgan)
             CredentialsProvider provider = createCredentialsProvider();
             try (CloseableHttpClient httpClient = HttpClients.custom().setDefaultCredentialsProvider(provider).build()) {
-                HttpPut request = new HttpPut(apiUrl);
+                HttpPost request = new HttpPost(apiUrl);
                 request.setHeader("Content-Type", "application/xml");
                 request.setEntity(new StringEntity(xmlPayload));
 
